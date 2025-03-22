@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import pandas as pd
 from ml.data import process_data
-from ml.model import train_model , inference , compute_model_metrics
+from ml.model import train_model , inference , compute_model_metrics , compute_slices_performance
 
 # Add the necessary imports for the starter code.
 
@@ -41,6 +41,8 @@ preds = inference(model, X_test)
 precision, recall, fbeta = compute_model_metrics(y_test, preds)
 print(f"Overall Metrics - Precision: {precision:.4f}, Recall: {recall:.4f}, F-beta: {fbeta:.4f}")
 
-joblib.dump(model, "model.pkl")
-joblib.dump(encoder, "encoder.pkl")
-joblib.dump(lb, "lb.pkl")
+compute_slices_performance(model, X_test, y_test, cat_features)
+
+joblib.dump(model, "../model/model.pkl")
+joblib.dump(encoder, "../model/encoder.pkl")
+joblib.dump(lb, "../model/lb.pkl")

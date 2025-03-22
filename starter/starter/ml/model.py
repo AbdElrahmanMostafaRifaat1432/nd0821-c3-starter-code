@@ -63,7 +63,7 @@ def inference(model, X):
     preds = model.predict(X)
     return preds
 
-def compute_slices_performance_(model, X, y, cat_features):
+def compute_slices_performance(model, X, y, cat_features):
     """
     Outputs the performance of the model on slices of the data.
     
@@ -88,3 +88,6 @@ def compute_slices_performance_(model, X, y, cat_features):
             y_pred = model.predict(X_cls)
             precision, recall, fbeta = compute_model_metrics(y_cls, y_pred)
             print(f"Performance on {feature}={cls}: precision={precision:.4f}, recall={recall:.4f}, fbeta={fbeta:.4f}")
+            with open("slice_output.txt", "a") as f:
+                f.write(f"Performance on {feature}={cls}: precision={precision:.4f}, recall={recall:.4f}, fbeta={fbeta:.4f}\n")
+            
