@@ -16,7 +16,7 @@ def data():
     """
     Fixture to load the cleaned Census dataset.
     """
-    csv_path = "nd0821-c3-starter-code/starter/data/census_cleaned.csv"
+    csv_path = "./starter/data/census_cleaned.csv"
     if not os.path.exists(csv_path):
         raise FileNotFoundError(f"Could not find CSV at {csv_path}")
     df = pd.read_csv(csv_path)
