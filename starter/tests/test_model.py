@@ -55,8 +55,8 @@ def test_data_shape(data):
 
 def test_process_data(processed_data):
     X, y, encoder, lb = processed_data
-    assert isinstance(X, pd.DataFrame)
-    assert isinstance(y, pd.Series)
+    assert isinstance(X, np.ndarray)
+    assert isinstance(y, np.ndarray)
     assert isinstance(encoder, OneHotEncoder)
     assert isinstance(lb, LabelBinarizer)
 
