@@ -34,7 +34,13 @@ X_test, y_test, encoder, lb = process_data(
 )
 
 # Train and save a model.
-model = RandomForestClassifier(random_state=42)
-model.fit(X_train, y_train)
+model = train_model(X_train, y_train)
 
-joblib.dump(model, "model.joblib")
+# Evaluate overall model performance.
+preds = inference(model, X_test)
+precision, recall, fbeta = compute_model_metrics(y_test, preds)
+print(f"Overall Metrics - Precision: {precision:.4f}, Recall: {recall:.4f}, F-beta: {fbeta:.4f}")
+
+joblib.dump(model, "model.pkl")
+joblib.dump(encoder, "encoder.pkl")
+joblib.dump(lb, "lb.pkl")
