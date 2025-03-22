@@ -62,3 +62,29 @@ def inference(model, X):
     """
     preds = model.predict(X)
     return preds
+
+def compute_slices_performance_(model, X, y, cat_features):
+    """
+    Outputs the performance of the model on slices of the data.
+    
+    Inputs
+    ------
+    model : ???
+        Trained machine learning model.
+    X : np.array
+        Data used for prediction.
+    y : np.array
+        Known labels, binarized.
+    cat_features : list
+        List of categorical features.
+    Returns
+    -------
+    None
+    """
+    for feature in cat_features:
+        for cls in np.unique(X[feature]):
+            X_cls = X[X[feature] == cls]
+            y_cls = y[X[feature] == cls]
+            y_pred = model.predict(X_cls)
+            precision, recall, fbeta = compute_model_metrics(y_cls, y_pred)
+            print(f"Performance on {feature}={cls}: precision={precision:.4f}, recall={recall:.4f}, fbeta={fbeta:.4f}")
