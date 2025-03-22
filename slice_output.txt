@@ -1,0 +1,16 @@
+Feature: education, Value: 10th | Precision: 0.5000 | Recall: 0.1250 | F-beta: 0.2000
+Feature: education, Value: HS-grad | Precision: 0.5864 | Recall: 0.3897 | F-beta: 0.4682
+Feature: education, Value: Assoc-voc | Precision: 0.5909 | Recall: 0.4194 | F-beta: 0.4906
+Feature: education, Value: Some-college | Precision: 0.6711 | Recall: 0.5336 | F-beta: 0.5945
+Feature: education, Value: Masters | Precision: 0.8245 | Recall: 0.8708 | F-beta: 0.8470
+Feature: education, Value: 9th | Precision: 1.0000 | Recall: 0.2000 | F-beta: 0.3333
+Feature: education, Value: 12th | Precision: 1.0000 | Recall: 0.0000 | F-beta: 0.0000
+Feature: education, Value: Bachelors | Precision: 0.7368 | Recall: 0.7252 | F-beta: 0.7310
+Feature: education, Value: 11th | Precision: 1.0000 | Recall: 0.2500 | F-beta: 0.4000
+Feature: education, Value: 7th-8th | Precision: 0.5000 | Recall: 0.1429 | F-beta: 0.2222
+Feature: education, Value: 1st-4th | Precision: 1.0000 | Recall: 0.0000 | F-beta: 0.0000
+Feature: education, Value: Assoc-acdm | Precision: 0.6327 | Recall: 0.6889 | F-beta: 0.6596
+Feature: education, Value: Prof-school | Precision: 0.8444 | Recall: 0.9048 | F-beta: 0.8736
+Feature: education, Value: 5th-6th | Precision: 1.0000 | Recall: 0.4000 | F-beta: 0.5714
+Feature: education, Value: Doctorate | Precision: 0.8133 | Recall: 0.8971 | F-beta: 0.8531
+Feature: education, Value: Preschool | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000

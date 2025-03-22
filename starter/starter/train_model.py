@@ -10,7 +10,7 @@ from ml.model import train_model , inference , compute_model_metrics , compute_s
 # Add the necessary imports for the starter code.
 
 # Add code to load in the data.
-data = pd.read_csv("../data/census.csv")
+data = pd.read_csv("./starter/data/census_cleaned.csv")
 
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20)
@@ -41,8 +41,15 @@ preds = inference(model, X_test)
 precision, recall, fbeta = compute_model_metrics(y_test, preds)
 print(f"Overall Metrics - Precision: {precision:.4f}, Recall: {recall:.4f}, F-beta: {fbeta:.4f}")
 
-compute_slices_performance(model, X_test, y_test, cat_features)
-
-joblib.dump(model, "../model/model.pkl")
-joblib.dump(encoder, "../model/encoder.pkl")
-joblib.dump(lb, "../model/lb.pkl")
+compute_slices_performance(
+    test,
+    "education",
+    model,
+    encoder,
+    lb,
+    label_column="salary",
+    categorical_features=cat_features
+)
+joblib.dump(model, "./starter/model/model.pkl")
+joblib.dump(encoder, "./starter/model/encoder.pkl")
+joblib.dump(lb, "./starter/model/lb.pkl")
