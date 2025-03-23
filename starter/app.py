@@ -8,7 +8,9 @@ from pydantic import BaseModel, Field
 from typing import Literal
 from starter.ml.data import process_data
 from starter.ml.model import inference
+import os
 
+print(BASE_DIR = os.path.dirname(os.path.abspath(__file__)))
 # Load model and encoders
 model = joblib.load("./model/model.pkl")
 encoder = joblib.load("./model/encoder.pkl")
