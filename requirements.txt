@@ -1,6 +1,9 @@
+#  pipreqs . --force
+fastapi==0.115.11
 joblib==1.4.2
 numpy==1.24.4
 pandas==2.0.3
+pydantic==2.10.6
 pytest==8.3.5
 scikit_learn==1.3.2
 setuptools==75.3.0
