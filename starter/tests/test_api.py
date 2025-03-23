@@ -1,7 +1,7 @@
 # run the following command
 # python -m pytest /mnt/d/mlops/course4/my_work/nd0821-c3-starter-code/starter/tests/test_api.py
 from fastapi.testclient import TestClient
-from starter.app import app  # Assuming your FastAPI app is named `app`
+from app import app  # Assuming your FastAPI app is named `app`
 
 client = TestClient(app)
 
@@ -9,7 +9,7 @@ def test_get_home():
     """Test the GET / endpoint"""
     response = client.get("/")
     assert response.status_code == 200
-    assert "Welcome" in response.text  # Modify based on actual response content
+    assert "Welcome" in response.json()  # Modify based on actual response content
 
 def test_predict_less_than_50K():
     """Test the ML model predicting '<=50K' income"""
