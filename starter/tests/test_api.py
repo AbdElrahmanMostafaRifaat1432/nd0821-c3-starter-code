@@ -1,7 +1,7 @@
 # run the following command
 # python -m pytest /mnt/d/mlops/course4/my_work/nd0821-c3-starter-code/starter/tests/test_api.py
 from fastapi.testclient import TestClient
-from app import app  # Assuming your FastAPI app is named `app`
+from starter.app import app  # Assuming your FastAPI app is named `app`
 
 client = TestClient(app)
 
