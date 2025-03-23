@@ -6,8 +6,8 @@ import joblib
 import pandas as pd
 from pydantic import BaseModel, Field
 from typing import Literal
-from starter.ml.data import process_data
-from starter.ml.model import inference
+from starter.starter.ml.data import process_data
+from starter.starter.ml.model import inference
 import os
 
 # Load model and encoders
