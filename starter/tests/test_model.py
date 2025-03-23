@@ -8,8 +8,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 
 # Import from your own modules:
-from starter.starter.ml.data import process_data
-from starter.starter.ml.model import train_model, compute_model_metrics, inference
+from starter.ml.data import process_data
+from starter.ml.model import train_model, compute_model_metrics, inference
 
 @pytest.fixture(scope="session")
 def data():
