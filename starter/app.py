@@ -11,9 +11,9 @@ from starter.ml.model import inference
 import os
 
 # Load model and encoders
-model = joblib.load("/starter/model/model.pkl")
-encoder = joblib.load("/starter/model/encoder.pkl")
-lb = joblib.load("/starter/model/lb.pkl")
+model = joblib.load("/nd0821-c3-starter-code/starter/model/model.pkl")
+encoder = joblib.load("/nd0821-c3-starter-code/starter/model/encoder.pkl")
+lb = joblib.load("/nd0821-c3-starter-code/starter/model/lb.pkl")
 
 # Define categorical features
 cat_features = [
