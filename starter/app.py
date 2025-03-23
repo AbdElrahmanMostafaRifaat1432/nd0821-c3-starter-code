@@ -60,7 +60,7 @@ def read_root() -> dict:
 def predict(data: CensusData) -> dict:
     """Perform model inference."""
     # Convert input to DataFrame
-    input_data = pd.DataFrame([data.dict(by_alias=True)])
+    input_data = pd.DataFrame([data.model_dump(by_alias=True)])
 
     # input_data.rename(columns={"marital-status": "marital_status", "native-country": "native_country"}, inplace=True)
 

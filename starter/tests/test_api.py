@@ -9,7 +9,8 @@ def test_get_home():
     """Test the GET / endpoint"""
     response = client.get("/")
     assert response.status_code == 200
-    assert "Welcome" in response.json()  # Modify based on actual response content
+    assert "message" in response.json()
+    assert "Welcome" in response.json()["message"]  # Modify based on actual response content
 
 def test_predict_less_than_50K():
     """Test the ML model predicting '<=50K' income"""
